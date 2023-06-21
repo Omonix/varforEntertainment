@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(19, 19, 19);
+  color: #00c0c0;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+}
+div {
+  cursor: default;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.headerIng {
+  position: sticky;
+  top: 0px;
+  background-color: rgb(19, 19, 19);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  border-bottom: solid;
+  border-color: #008180;
+  padding: 1em;
+}
+.footerIng {
+  background-color: rgb(19, 19, 19);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-top: solid;
+  border-color: #008180;
+  padding: 1em;
+}
+.developed {
+  margin-right: 0.5em;
+}
+.aFalse {
+  color: #00c0c0;
+  transition: all 800ms;
+  text-decoration: none;
+  cursor: pointer;
+}
+.aFalse:hover {
+  color: #00a1a0;
+}
+.search {
+  color: #00c0c0;
+  background-color: rgb(19, 19, 19);
+  border: solid 0.5px #008180;
+  border-radius: 5px;
+  font-family: "Source Code Pro", monospace;
+  margin-right: 1em;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.search:focus {
+  outline: none;
+}
+.search::placeholder {
+  color: #00a1a0;
+  opacity: 70%;
+  font-weight: 600;
+}
+.buttonSearch {
+  color: #00c0c0;
+  border: solid 1.5px #008180;
+  background-color: rgb(19, 19, 19);
+  border-radius: 5px;
+  transition: all 800ms;
+}
+.buttonSearch:hover {
+  color: rgb(19, 19, 19);
+  background-color: #00c0c0;
+}
+.searcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.creater {
+  margin-right: 5em;
+}
+.logo {
+  animation-name: loggo;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.containLogo {
+  width: 15em;
+}
+.imgHome {
+  margin: 1em 5em 2em;
+  border-radius: 15px;
+  border: solid 1px #00a1a0;
+}
+.imgHomeContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.describir {
+  margin: 2em;
+}
+.describirLB {
+  margin: 1em;
+}
+.former {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  margin: 2em;
+}
+.formeres {
+  margin: 1em 1em 0em;
+}
+.buttonSearchForm {
+  margin: 1em;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes loggo {
+  0% {
+    margin-left: 0em;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    margin-left: 6em;
+  }
+  100% {
+    margin-left: 0em;
   }
 }

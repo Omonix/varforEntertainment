@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Header from "./component/header/Header";
+import Formula from "./component/formula/Formula";
+import Home from "./component/home/Home";
+import Footer from "./component/footer/Footer";
+import Search from "./component/search/Search.js";
 
-function App() {
+const App = () => {
+  const [bodyG, setBodyG] = useState("home");
+  const changeBodyG = (valueC) => {
+    setBodyG(valueC);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <Header option={changeBodyG} />
+      {bodyG === "home" ? (
+        <Home />
+      ) : bodyG === "formula" ? (
+        <Formula />
+      ) : bodyG === "search" ? (
+        <Search />
+      ) : (
+        <div>NONE</div>
+      )}
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,3 +1,3 @@
 # varforEntertainment
 
-[Open project]"https://varforentertainment.onrender.com/"
+[OpenProject]"https://varforentertainment.onrender.com/"

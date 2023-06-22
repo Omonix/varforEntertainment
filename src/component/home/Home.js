@@ -12,7 +12,7 @@ const Home = () => {
       name: "Developer javascript",
       link: developerJS,
       height: "150em",
-      descript: "Onze développeurs",
+      descript: "Quinze développeurs",
     },
     {
       name: "Happy woman",
@@ -56,12 +56,14 @@ const Home = () => {
         {arrImg.map((element, index) => {
           return (
             <div key={index} className="imgHomeContainer">
-              <img
-                className="imgHome"
-                height={element.height}
-                src={element.link}
-                alt={element.name}
-              />
+              <div className="moveImg">
+                <img
+                  className="imgHome"
+                  height={element.height}
+                  src={element.link}
+                  alt={element.name}
+                />
+              </div>
               <div>{element.descript}</div>
             </div>
           );
@@ -76,8 +78,8 @@ const Home = () => {
             intégrer un lycée spécialisé dans l'informatique et plus
             particulierement dans le développement.
             <br />
-            Il crée l'entreprise VARFÖR suite à un projet en 3ème qu'il
-            continuera et perfectionera année après année.
+            Il crée l'entreprise VARFÖR suite à un projet en 3ème qu'il souhaite
+            perfectionner.
           </div>
         </div>
       </div>

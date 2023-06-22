@@ -1,0 +1,17 @@
+15 développeurs + 1 joker : 
+6 mainteance/surveillance
+5 code site
+4 code logiciel
+1 joker
+alternance : 
+tout les mois : 
+3 maintenance => code site
+3 maintenance => code logiciel
+4 code site => maintenance
+1 code site => code logiciel
+2 code logiciel => code site
+2 code logicel => maintenance
+
+mainteance : 4+2 : 6
+code site : 3+2 : 5
+code logiciel : 3+1 : 4

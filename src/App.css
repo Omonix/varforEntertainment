@@ -7,8 +7,23 @@ body {
 div {
   cursor: default;
 }
-.render {
-  position: absolute;
+.imgProject {
+  height: 15em;
+  width: auto;
+  border-radius: 20px;
+  border: solid 1px #008180;
+}
+.contentProject {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.project {
+  margin:15px 40px;
+}
+.titleProject {
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 .headerIng {
   position: sticky;

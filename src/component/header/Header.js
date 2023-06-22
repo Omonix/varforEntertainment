@@ -3,24 +3,32 @@ import logoImg from "../../img/logoV.jpg";
 import { useState } from "react";
 import projectArr from "../../projectList.json";
 
-const Header = ({ option }) => {
+const Header = ({ option, updateSearchValue }) => {
   const [searchValue, setSearchValue] = useState("");
 
   const searchInputHandler = (event) => {
     setSearchValue(event.target.value);
   };
   const whatSearch = (theValue) => {
-    for (let i = 0; i < projectArr.length; i++) {
-      for (let x = 0; x < projectArr[i].name.length; x++) {
-        if (projectArr[i].name[x] === theValue[0]) {
-          if (
-            projectArr[i].name.substring(x, x + theValue.length) === theValue
-          ) {
-            console.log(projectArr[i].id);
+    const arrIdResult = [];
+    if (theValue !== "") {
+      for (let i = 0; i < projectArr.length; i++) {
+        for (let x = 0; x < projectArr[i].name.length; x++) {
+          if (projectArr[i].name[x] === theValue[0]) {
+            if (
+              projectArr[i].name.substring(x, x + theValue.length) === theValue
+            ) {
+              arrIdResult.push(projectArr[i].id);
+            }
           }
         }
       }
+    } else {
+      for (let y = 0; y < projectArr.length; y++) {
+        arrIdResult.push(projectArr[y].id);
+      }
     }
+    updateSearchValue(arrIdResult);
   };
   return (
     <div className="headerIng">

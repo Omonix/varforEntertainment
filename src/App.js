@@ -8,18 +8,19 @@ import Search from "./component/search/Search.js";
 
 const App = () => {
   const [bodyG, setBodyG] = useState("home");
+  const [searchValue, setSearchValue] = useState("");
   const changeBodyG = (valueC) => {
     setBodyG(valueC);
   };
   return (
     <div className="body">
-      <Header option={changeBodyG} />
+      <Header option={changeBodyG} updateSearchValue={setSearchValue} />
       {bodyG === "home" ? (
         <Home />
       ) : bodyG === "formula" ? (
         <Formula />
       ) : bodyG === "search" ? (
-        <Search />
+        <Search searching={searchValue} />
       ) : (
         <div>NONE</div>
       )}
